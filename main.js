@@ -48,6 +48,20 @@ console.log(eseguiOperazione(7, 4, sottrai));
 console.log(eseguiOperazione(5, 6, moltiplica));
 console.log(eseguiOperazione(36, 12, dividi));
 
+// Crea un generatore di funzioni creaTimer
+//Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
+
+function creaTimer(time) {
+    return function () {
+        setTimeout(() => {
+            console.log("Tempo scaduto!")
+        }, time)
+    }
+}
+creaTimer(2000)();
+
+
+
 
 
 
