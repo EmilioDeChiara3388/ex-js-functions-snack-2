@@ -17,9 +17,18 @@ console.log(somma(1, 3)); */
 
 // Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.
 
-const somma = (num1, num2) => console.log(num1 + num2);
+/* const somma = (num1, num2) => console.log(num1 + num2);
 
-somma(6, 9);
+somma(6, 9); */
+
+// Crea una arrow function che calcola il quadrato di un numero.
+// Definisci una funzione chiamata quadrato che accetta un numero e restituisce il suo quadrato in una sola riga.
+
+const quadrato = (num) => console.log(num * num);
+
+quadrato(7)
+
+
 
 
 
