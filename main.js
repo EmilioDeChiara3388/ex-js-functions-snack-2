@@ -26,7 +26,29 @@ somma(6, 9); */
 
 const quadrato = (num) => console.log(num * num);
 
-quadrato(7)
+quadrato(7);
+
+//Crea una funzione eseguiOperazione
+//Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri e una funzione operatore (callback). La funzione deve eseguire l'operazione fornita sui due numeri.
+
+const somma = (num1, num2) => num1 + num2;
+
+const sottrai = (num1, num2) => num1 - num2;
+
+const moltiplica = (num1, num2) => num1 * num2;
+
+const dividi = (num1, num2) => num1 / num2;
+
+function eseguiOperazione(num1, num2, operatore) {
+    return operatore(num1, num2)
+};
+
+console.log(eseguiOperazione(3, 9, somma));
+console.log(eseguiOperazione(7, 4, sottrai));
+console.log(eseguiOperazione(5, 6, moltiplica));
+console.log(eseguiOperazione(36, 12, dividi));
+
+
 
 
 
