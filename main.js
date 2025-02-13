@@ -75,19 +75,25 @@ clearInterval(stampaOgniSecondo) */
 // Crea un contatore automatico con setInterval
 // Definisci una funzione creaContatoreAutomatico che accetta un intervallo di tempo e restituisce una funzione che avvia un setInterval, incrementando un contatore e stampandolo.
 
-/* let counter = 0;
-const creaContatoreAutomatico = setInterval(counterIncrease, 1000);
-function counterIncrease() {
-    counter++
-    return console.log(counter);
+
+function creaContatoreAutomatico(time) {
+    let counter = 0;
+    return () => {
+        setInterval(() => {
+            counter++;
+            console.log(counter);
+        }, time)
+    }
 }
 
-clearInterval(creaContatoreAutomatico) */
+const ogniSecondo = creaContatoreAutomatico(1000)
+ogniSecondo()
+
 
 // Crea una funzione che ferma un timer dopo un certo tempo
 // Scrivi una funzione eseguiEferma che accetta un messaggio, un tempo di avvio e un tempo di stop. Il messaggio deve essere stampato a intervalli regolari, ma si deve fermare dopo il tempo di stop.
 
-function eseguiEferma(prima, mentre, dopo) {
+/* function eseguiEferma(prima, mentre, dopo) {
 
     prima();
     mentre();
@@ -103,7 +109,7 @@ eseguiEferma(
         console.log("Fine timer");
         clearInterval(timerId)
     }, 6000)
-)
+) */
 
 
 
